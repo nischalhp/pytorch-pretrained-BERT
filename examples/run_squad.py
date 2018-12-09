@@ -140,9 +140,11 @@ def read_squad_examples(input_file, is_training):
                 end_position = None
                 orig_answer_text = None
                 if is_training:
+                    '''
                     if len(qa["answers"]) != 1:
                         raise ValueError(
                             "For training, each question should have exactly 1 answer.")
+                    '''
                     answer = qa["answers"][0]
                     orig_answer_text = answer["text"]
                     answer_offset = answer["answer_start"]
